@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="8" passed="8" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-12-08T19:08:13 IST" name="Suite" finished-at="2024-12-08T19:09:23 IST" duration-ms="69477">
+    <groups>
+    </groups>
+    <test started-at="2024-12-08T19:08:13 IST" name="Homepage_Tab" finished-at="2024-12-08T19:08:37 IST" duration-ms="23608">
+      <class name="Youfoodlabs.Youfoodlabs.Homepage_Tab">
+        <test-method is-config="true" signature="openbrowser()[pri:0, instance:Youfoodlabs.Youfoodlabs.Homepage_Tab@6e6f2380]" started-at="2024-12-08T19:08:13 IST" name="openbrowser" description="openbrowser" finished-at="2024-12-08T19:08:23 IST" duration-ms="9114" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openbrowser -->
+        <test-method signature="TC_01()[pri:0, instance:Youfoodlabs.Youfoodlabs.Homepage_Tab@6e6f2380]" started-at="2024-12-08T19:08:23 IST" name="TC_01" description="click on shop Tab" finished-at="2024-12-08T19:08:28 IST" duration-ms="5832" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_01 -->
+        <test-method signature="TC_02()[pri:0, instance:Youfoodlabs.Youfoodlabs.Homepage_Tab@6e6f2380]" started-at="2024-12-08T19:08:28 IST" name="TC_02" description="click on shop Tab" finished-at="2024-12-08T19:08:34 IST" duration-ms="5731" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_02 -->
+        <test-method signature="TC_03()[pri:0, instance:Youfoodlabs.Youfoodlabs.Homepage_Tab@6e6f2380]" started-at="2024-12-08T19:08:34 IST" name="TC_03" description="click on About Us" finished-at="2024-12-08T19:08:35 IST" duration-ms="1000" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_03 -->
+        <test-method signature="TC_04()[pri:0, instance:Youfoodlabs.Youfoodlabs.Homepage_Tab@6e6f2380]" started-at="2024-12-08T19:08:35 IST" name="TC_04" description="click on our Beginning" finished-at="2024-12-08T19:08:36 IST" duration-ms="995" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_04 -->
+        <test-method is-config="true" signature="Complete_Test()[pri:0, instance:Youfoodlabs.Youfoodlabs.Homepage_Tab@6e6f2380]" started-at="2024-12-08T19:08:36 IST" name="Complete_Test" finished-at="2024-12-08T19:08:37 IST" duration-ms="883" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Complete_Test -->
+      </class> <!-- Youfoodlabs.Youfoodlabs.Homepage_Tab -->
+    </test> <!-- Homepage_Tab -->
+    <test started-at="2024-12-08T19:08:37 IST" name="Homepage" finished-at="2024-12-08T19:09:23 IST" duration-ms="45844">
+      <class name="Youfoodlabs.Youfoodlabs.Homepage">
+        <test-method is-config="true" signature="LaunchBrowser()[pri:0, instance:Youfoodlabs.Youfoodlabs.Homepage@8519cb4]" started-at="2024-12-08T19:08:37 IST" name="LaunchBrowser" description="openbrowser" finished-at="2024-12-08T19:08:45 IST" duration-ms="8332" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LaunchBrowser -->
+        <test-method signature="TC_01()[pri:0, instance:Youfoodlabs.Youfoodlabs.Homepage@8519cb4]" started-at="2024-12-08T19:08:45 IST" name="TC_01" description="click on shop our Range &amp; navigate Back" finished-at="2024-12-08T19:08:50 IST" duration-ms="4173" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_01 -->
+        <test-method signature="TC_02()[pri:0, instance:Youfoodlabs.Youfoodlabs.Homepage@8519cb4]" started-at="2024-12-08T19:08:50 IST" name="TC_02" description="click on whats trending" finished-at="2024-12-08T19:08:55 IST" duration-ms="5482" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_02 -->
+        <test-method signature="TC_03()[pri:0, instance:Youfoodlabs.Youfoodlabs.Homepage@8519cb4]" started-at="2024-12-08T19:08:55 IST" name="TC_03" description="click on Yu Got Featured" finished-at="2024-12-08T19:09:16 IST" duration-ms="21028" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_03 -->
+        <test-method signature="TC_04()[pri:0, instance:Youfoodlabs.Youfoodlabs.Homepage@8519cb4]" started-at="2024-12-08T19:09:16 IST" name="TC_04" description="click on Footer&#039;s Quick Links" finished-at="2024-12-08T19:09:22 IST" duration-ms="6243" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_04 -->
+        <test-method is-config="true" signature="Complete_Test()[pri:0, instance:Youfoodlabs.Youfoodlabs.Homepage@8519cb4]" started-at="2024-12-08T19:09:22 IST" name="Complete_Test" finished-at="2024-12-08T19:09:23 IST" duration-ms="579" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Complete_Test -->
+      </class> <!-- Youfoodlabs.Youfoodlabs.Homepage -->
+    </test> <!-- Homepage -->
+  </suite> <!-- Suite -->
+</testng-results>

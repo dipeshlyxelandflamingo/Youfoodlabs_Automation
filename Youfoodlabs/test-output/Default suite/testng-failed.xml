@@ -3,16 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Youfoodlabs.Youfoodlabs.Homepage_Tab">
+      <class name="Youfoodlabs.Youfoodlabs.Checkout">
         <methods>
-          <include name="openbrowser"/>
-          <include name="TC_02"/>
-          <include name="Complete_Test"/>
-          <include name="TC_03"/>
-          <include name="TC_01"/>
-          <include name="TC_04"/>
+          <include name="TC_06"/>
+          <include name="Openbrowser"/>
         </methods>
-      </class> <!-- Youfoodlabs.Youfoodlabs.Homepage_Tab -->
+      </class> <!-- Youfoodlabs.Youfoodlabs.Checkout -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

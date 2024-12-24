@@ -17,9 +17,9 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-
 import dev.failsafe.internal.util.Durations;
 import io.github.bonigarcia.wdm.WebDriverManager;
+
 
 public class PLP {
 
@@ -53,60 +53,66 @@ public class PLP {
 	@Test(description = "click on All Product inside EverdyFoods")
 	void TC_01() {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		WebElement EverdyFoods = wait
-				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//span[@class='product-title'])[1]")));
+		WebElement EverdyFoods = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(
+				"//img[@src='//yufoodsco.com/cdn/shop/files/Rectangle_605_540x_87f86fd3-82e8-4f1b-8d1e-839e12a6463a_1024x1024.png?v=1631786684']")));
 		EverdyFoods.click();
 
-		for (int i = 1; i <= 9; i++) {
-			WebElement Allproducts = wait.until(ExpectedConditions
-					.visibilityOfElementLocated(By.xpath("//body/main[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[6]/div["
-							+ i + "]/div[1]/div[1]/a[1]/div[1]/div[1]/img[1]")));
-			Allproducts.click();
+		String[] allEverdyFoodsproduct = {
+				"(//a[@href=\"/collections/everyday-foods-better-for-you/products/chilli-garlic-fried-rice-pack-of-4\"])[1]",
+				"(//a[@href=\"/collections/everyday-foods-better-for-you/products/desi-chowmein-veg-noodle-meal-pack-of-2\"])[1]",
+				"(//a[@href=\"/collections/everyday-foods-better-for-you/products/fab-noodles-low-carb-high-protein-pack-of-3\"])[1]",
+				"(//a[@href=\"/collections/everyday-foods-better-for-you/products/noodle-meal-combo-pack-kung-pao-chicken-schezwan-stir-fry-pack-of-2\"])[1]",
+				"(//a[@href=\"/collections/everyday-foods-better-for-you/products/kung-pao-chicken-noodle-meal-pack-of-2\"])[1]",
+				"(//a[@href=\"/collections/everyday-foods-better-for-you/products/noodles-combo-pack-hakka-whole-wheat-fab-pack-of-4\"])[1]",
+				"(//a[@href=\"/collections/everyday-foods-better-for-you/products/schezwan-stir-fry-veg-noodle-meal-pack-of-2\"])[1]",
+				"(//a[@href=\"/collections/everyday-foods-better-for-you/products/veg-hakka-noodles-pack-of-3\"])[1]",
+				"(//a[@href=\"/collections/everyday-foods-better-for-you/products/whole-wheat-noodles-pack-of-3\"])[1]" };
+
+		for (String allEverdyFoodsproducts : allEverdyFoodsproduct) {
+			WebElement prodcuts = wait
+					.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(allEverdyFoodsproducts)));
+			prodcuts.click();
 			driver.navigate().back();
 
 		}
 	}
 
-	@Test(description = "click on All Filter inside EverdyFoods")
+	@Test(description = "click on snacking guilt free category")
 	void TC_02() {
+
+		driver.navigate().to("https://yufoodsco.com/collections");
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		WebElement Snackingcategory = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(
+				"//img[@src ='//yufoodsco.com/cdn/shop/files/Rectangle_603_540x_70d2d006-961f-4b77-8f30-8d47ab6a3fc0_1024x1024.png?v=1631786701']")));
+		Snackingcategory.click();
 
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("scroll(0,-1500)");
+		String[] SnackingGuiltFreeproduct = {
+				"(//a[@href='/collections/snacking-guilt-free/products/chilli-chicken-noodles-pack-of-2'])[1]",
+				"(//a[@href='/collections/snacking-guilt-free/products/pasta-combo-pack-of-4-2-peri-peri-2-three-cheese-pasta'])[1]",
+				"(//a[@href='/collections/snacking-guilt-free/products/red-hot-noodles-veg-pack-of-2'])[1]" };
 
-		String[] EverdyFoods = { "(//button[@class ='js-accordion-header c-accordion__header '])[1]",
-				"//ul[@id='c-accordion--menu_69']//a[@class='js-accordion-link c-accordion__link']",
-				"(//button[@class ='js-accordion-header c-accordion__header '])[2]",
-				"//ul[@id='c-accordion--bf6d708']//a[@class='js-accordion-link c-accordion__link']",
-				"(//button[@class ='js-accordion-header c-accordion__header '])[3]",
-				"//ul[@id='c-accordion--1522966']//a[@class='js-accordion-link c-accordion__link']",
-				"(//button[@class ='js-accordion-header c-accordion__header '])[4]",
-				"//ul[@id='c-accordion--23d72a2']//a[@class='js-accordion-link c-accordion__link']",
-				"(//button[@class ='js-accordion-header c-accordion__header '])[5]",
-				"//ul[@id='c-accordion--2223c28']//a[@class='js-accordion-link c-accordion__link']",
-				"(//button[@class ='js-accordion-header c-accordion__header '])[6]",
-				"(//ul[@id='c-accordion--65f5643']//a[@class='js-accordion-link c-accordion__link'])[1]", };
-
-		for (String EverdyFood : EverdyFoods) {
-			WebElement filter = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(EverdyFood)));
-			filter.click();
+		for (String SnackingGuiltFreeproducts : SnackingGuiltFreeproduct) {
+			WebElement products = wait
+					.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(SnackingGuiltFreeproducts)));
+			products.click();
+			driver.navigate().back();
 
 		}
-
 	}
 
-	@Test(description = "click on All Filter inside EverdyFoods")
+	@Test(description = "click on Fruit Juices – 100% Natural category")
 	void TC_03() {
 
 		driver.navigate().to("https://yufoodsco.com/collections");
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		WebElement Snackingcategory = wait
-				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//span[@class='product-title'])[2]")));
-		Snackingcategory.click();
+		WebElement category = wait.until(ExpectedConditions
+				.visibilityOfElementLocated(By.xpath("(//a[@href='/collections/fruit-juices-100-natural'])[1]")));
+		category.click();
 
-		WebElement product2 = wait.until(ExpectedConditions.visibilityOfElementLocated(
-				By.xpath("(//img[@class='lazyload-fade first-image lazyautosizes lazyloaded'])[2]")));
-		product2.click();
+		WebElement product = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(
+				"(//a[@href='/collections/fruit-juices-100-natural/products/100-coconut-water-pack-of-6'])[1]")));
+		product.click();
+		driver.navigate().back();
 
 	}
 }

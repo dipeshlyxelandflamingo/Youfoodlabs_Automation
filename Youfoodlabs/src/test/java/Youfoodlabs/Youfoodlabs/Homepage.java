@@ -48,7 +48,6 @@ public class Homepage {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		WebElement popup = wait.until(ExpectedConditions.visibilityOfElementLocated(
 				By.xpath("//a[@class='js-popup-close newsletter__popup-container-close']")));
-
 		popup.click();
 	}
 

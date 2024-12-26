@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 3 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-passed">Suite</span>
+              <span class="suite-name border-failed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,7 +92,31 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">14 methods,   14 passed</span>
+                    <span class="method-stats">14 methods, 3 failed,   11 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="Youfoodlabs.Youfoodlabs.Homepage" class="method navigator-link" hash-for-method="TC_02">TC_02</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="Youfoodlabs.Youfoodlabs.Homepage" class="method navigator-link" hash-for-method="TC_03">TC_03</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="Youfoodlabs.Youfoodlabs.Homepage" class="method navigator-link" hash-for-method="TC_04">TC_04</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -123,11 +147,6 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="Youfoodlabs.Youfoodlabs.Homepage" class="method navigator-link" hash-for-method="TC_02">TC_02</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="Youfoodlabs.Youfoodlabs.Checkout" class="method navigator-link" hash-for-method="TC_02">TC_02</a> <!-- method navigator-link -->
                       </span>
                       <br/>
@@ -138,22 +157,12 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="Youfoodlabs.Youfoodlabs.Homepage" class="method navigator-link" hash-for-method="TC_03">TC_03</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="Youfoodlabs.Youfoodlabs.Checkout" class="method navigator-link" hash-for-method="TC_03">TC_03</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="Youfoodlabs.Youfoodlabs.Homepage_Tab" class="method navigator-link" hash-for-method="TC_04">TC_04</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="Youfoodlabs.Youfoodlabs.Homepage" class="method navigator-link" hash-for-method="TC_04">TC_04</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -183,6 +192,104 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">Youfoodlabs.Youfoodlabs.Homepage</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_02">
+                  </a> <!-- TC_02 -->
+                  <span class="method-name">TC_02</span>
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=131.0.6778.205)
+Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.7&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [3b9e11c052ca29b4b7482a97b019a047, executeScript {script=scroll(0,500), args=[]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.205, chrome: {chromedriverVersion: 131.0.6778.204 (52183f9e99a..., userDataDir: C:\Users\LYXELA~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65469}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65469/devtoo..., se:cdpVersion: 131.0.6778.205, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3b9e11c052ca29b4b7482a97b019a047
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:199)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:132)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:531)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:476)
+	at Youfoodlabs.Youfoodlabs.Homepage.TC_02(Homepage.java:97)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 32 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(click on whats trending)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_03">
+                  </a> <!-- TC_03 -->
+                  <span class="method-name">TC_03</span>
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=131.0.6778.205)
+Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.7&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [3b9e11c052ca29b4b7482a97b019a047, executeScript {script=scroll(0,1400), args=[]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.205, chrome: {chromedriverVersion: 131.0.6778.204 (52183f9e99a..., userDataDir: C:\Users\LYXELA~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65469}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65469/devtoo..., se:cdpVersion: 131.0.6778.205, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3b9e11c052ca29b4b7482a97b019a047
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:199)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:132)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:531)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:476)
+	at Youfoodlabs.Youfoodlabs.Homepage.TC_03(Homepage.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 32 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(click on Yu Got Featured)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_04">
+                  </a> <!-- TC_04 -->
+                  <span class="method-name">TC_04</span>
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=131.0.6778.205)
+Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.7&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [3b9e11c052ca29b4b7482a97b019a047, executeScript {script=scroll(0,500), args=[]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.205, chrome: {chromedriverVersion: 131.0.6778.204 (52183f9e99a..., userDataDir: C:\Users\LYXELA~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65469}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65469/devtoo..., se:cdpVersion: 131.0.6778.205, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3b9e11c052ca29b4b7482a97b019a047
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:199)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:132)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:531)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:476)
+	at Youfoodlabs.Youfoodlabs.Homepage.TC_04(Homepage.java:182)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 32 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(click on Footer's Quick Links)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -304,33 +411,6 @@
 (click on shop our Range & navigate Back)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="TC_02">
-                  </a> <!-- TC_02 -->
-                  <span class="method-name">TC_02</span>
-                  <em>
-(click on whats trending)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="TC_03">
-                  </a> <!-- TC_03 -->
-                  <span class="method-name">TC_03</span>
-                  <em>
-(click on Yu Got Featured)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="TC_04">
-                  </a> <!-- TC_04 -->
-                  <span class="method-name">TC_04</span>
-                  <em>
-(click on Footer's Quick Links)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Suite-class-passed -->
         </div> <!-- panel Suite -->
@@ -403,66 +483,66 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(14);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'TC_03')
-data.setCell(0, 2, 'Youfoodlabs.Youfoodlabs.Homepage')
-data.setCell(0, 3, 21332);
+data.setCell(0, 1, 'TC_06')
+data.setCell(0, 2, 'Youfoodlabs.Youfoodlabs.Checkout')
+data.setCell(0, 3, 11153);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'TC_06')
+data.setCell(1, 1, 'TC_02')
 data.setCell(1, 2, 'Youfoodlabs.Youfoodlabs.Checkout')
-data.setCell(1, 3, 8153);
+data.setCell(1, 3, 6545);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'TC_02')
+data.setCell(2, 1, 'TC_01')
 data.setCell(2, 2, 'Youfoodlabs.Youfoodlabs.Homepage')
-data.setCell(2, 3, 7995);
+data.setCell(2, 3, 6122);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'TC_01')
-data.setCell(3, 2, 'Youfoodlabs.Youfoodlabs.Homepage_Tab')
-data.setCell(3, 3, 5946);
+data.setCell(3, 1, 'TC_04')
+data.setCell(3, 2, 'Youfoodlabs.Youfoodlabs.Checkout')
+data.setCell(3, 3, 5182);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'TC_02')
-data.setCell(4, 2, 'Youfoodlabs.Youfoodlabs.Checkout')
-data.setCell(4, 3, 5842);
+data.setCell(4, 1, 'TC_01')
+data.setCell(4, 2, 'Youfoodlabs.Youfoodlabs.Homepage_Tab')
+data.setCell(4, 3, 4831);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'TC_02')
-data.setCell(5, 2, 'Youfoodlabs.Youfoodlabs.Homepage_Tab')
-data.setCell(5, 3, 5556);
+data.setCell(5, 1, 'TC_05')
+data.setCell(5, 2, 'Youfoodlabs.Youfoodlabs.Checkout')
+data.setCell(5, 3, 1094);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'TC_04')
-data.setCell(6, 2, 'Youfoodlabs.Youfoodlabs.Homepage')
-data.setCell(6, 3, 5139);
+data.setCell(6, 1, 'TC_01')
+data.setCell(6, 2, 'Youfoodlabs.Youfoodlabs.Checkout')
+data.setCell(6, 3, 559);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'TC_04')
+data.setCell(7, 1, 'TC_03')
 data.setCell(7, 2, 'Youfoodlabs.Youfoodlabs.Checkout')
-data.setCell(7, 3, 4268);
+data.setCell(7, 3, 446);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'TC_01')
-data.setCell(8, 2, 'Youfoodlabs.Youfoodlabs.Homepage')
-data.setCell(8, 3, 3981);
+data.setCell(8, 1, 'TC_03')
+data.setCell(8, 2, 'Youfoodlabs.Youfoodlabs.Homepage_Tab')
+data.setCell(8, 3, 31);
 data.setCell(9, 0, 9)
 data.setCell(9, 1, 'TC_04')
 data.setCell(9, 2, 'Youfoodlabs.Youfoodlabs.Homepage_Tab')
-data.setCell(9, 3, 1173);
+data.setCell(9, 3, 25);
 data.setCell(10, 0, 10)
 data.setCell(10, 1, 'TC_03')
-data.setCell(10, 2, 'Youfoodlabs.Youfoodlabs.Homepage_Tab')
-data.setCell(10, 3, 948);
+data.setCell(10, 2, 'Youfoodlabs.Youfoodlabs.Homepage')
+data.setCell(10, 3, 16);
 data.setCell(11, 0, 11)
-data.setCell(11, 1, 'TC_05')
-data.setCell(11, 2, 'Youfoodlabs.Youfoodlabs.Checkout')
-data.setCell(11, 3, 473);
+data.setCell(11, 1, 'TC_04')
+data.setCell(11, 2, 'Youfoodlabs.Youfoodlabs.Homepage')
+data.setCell(11, 3, 16);
 data.setCell(12, 0, 12)
-data.setCell(12, 1, 'TC_01')
-data.setCell(12, 2, 'Youfoodlabs.Youfoodlabs.Checkout')
-data.setCell(12, 3, 167);
+data.setCell(12, 1, 'TC_02')
+data.setCell(12, 2, 'Youfoodlabs.Youfoodlabs.Homepage_Tab')
+data.setCell(12, 3, 15);
 data.setCell(13, 0, 13)
-data.setCell(13, 1, 'TC_03')
-data.setCell(13, 2, 'Youfoodlabs.Youfoodlabs.Checkout')
-data.setCell(13, 3, 140);
+data.setCell(13, 1, 'TC_02')
+data.setCell(13, 2, 'Youfoodlabs.Youfoodlabs.Homepage')
+data.setCell(13, 3, 13);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <span class="suite-total-time">Total running time: 36 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -495,85 +575,93 @@ return data;
               </div> <!-- configuration-test before -->
               <div class="test-method">
                 <span class="method-name">TC_01</span>
-                <span class="method-start">9258 ms</span>
+                <span class="method-start">10679 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">TC_02</span>
-                <span class="method-start">15215 ms</span>
+                <span class="method-start">15519 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">TC_03</span>
-                <span class="method-start">20774 ms</span>
+                <span class="method-start">15537 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">TC_04</span>
-                <span class="method-start">21725 ms</span>
+                <span class="method-start">15574 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">Complete_Test</span>
-                <span class="method-start">22904 ms</span>
+                <span class="method-start">15608 ms</span>
               </div> <!-- configuration-test after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">Youfoodlabs.Youfoodlabs.Homepage</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">LaunchBrowser</span>
-                <span class="method-start">23685 ms</span>
+                <span class="method-start">1735711 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
                 <span class="method-name">TC_01</span>
-                <span class="method-start">31372 ms</span>
+                <span class="method-start">1749848 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">TC_02</span>
-                <span class="method-start">35354 ms</span>
+                <span class="method-start">1755972 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">TC_03</span>
-                <span class="method-start">43353 ms</span>
+                <span class="method-start">1755989 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">TC_04</span>
-                <span class="method-start">64687 ms</span>
+                <span class="method-start">1756009 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">Complete_Test</span>
-                <span class="method-start">69830 ms</span>
+                <span class="method-start">1756029 ms</span>
               </div> <!-- configuration-test after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">Youfoodlabs.Youfoodlabs.Checkout</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">Openbrowser</span>
-                <span class="method-start">70324 ms</span>
+                <span class="method-start">1756528 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
                 <span class="method-name">TC_01</span>
-                <span class="method-start">77409 ms</span>
+                <span class="method-start">1765369 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">TC_02</span>
-                <span class="method-start">77579 ms</span>
+                <span class="method-start">1765931 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">TC_03</span>
-                <span class="method-start">83424 ms</span>
+                <span class="method-start">1772480 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">TC_04</span>
-                <span class="method-start">83565 ms</span>
+                <span class="method-start">1772928 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">TC_05</span>
-                <span class="method-start">87835 ms</span>
+                <span class="method-start">1778115 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">TC_06</span>
-                <span class="method-start">88310 ms</span>
+                <span class="method-start">1779212 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">closebrowser</span>
-                <span class="method-start">96465 ms</span>
+                <span class="method-start">1790367 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

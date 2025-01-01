@@ -5,7 +5,11 @@
     <classes>
       <class name="Youfoodlabs.Youfoodlabs.Checkout">
         <methods>
+          <include name="TC_04"/>
+          <include name="closebrowser"/>
+          <include name="TC_03"/>
           <include name="TC_06"/>
+          <include name="TC_05"/>
           <include name="Openbrowser"/>
         </methods>
       </class> <!-- Youfoodlabs.Youfoodlabs.Checkout -->
